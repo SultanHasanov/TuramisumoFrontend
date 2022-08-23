@@ -1,0 +1,40 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+    background-color: #00486c;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+a {
+    color: white;
+}
+
+nav {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.nav_block {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img {
+    width: 6%;
+    position: absolute;
+    right: 42rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0rem;
+}
+
+.img img {
+    width: 100%;
+}
