@@ -5,21 +5,16 @@ import '../../../scss/main/mainRooms.scss'
 
 const MainRooms = () => {
     const dispatch = useDispatch()
-    const rooms = useSelector((state) => state.room)
-    console.log()
+    // const rooms = useSelector((state) => state.room)
+    // console.log()
 
 
-    useEffect(() => {
-        dispatch(getRooms())
-    }, [dispatch])
+    // useEffect(() => {
+    //     dispatch(getRooms())
+    // }, [dispatch])
 
   return (
     <div>
-        {rooms.map((item) => {
-            return (
-                <div>{item.name}</div>
-            )
-        })}
     </div>
   )
 }
