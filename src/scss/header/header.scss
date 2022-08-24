@@ -1,0 +1,108 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+  align-items: center;
+  font-size: 0.8rem;
+  animation: mulse 0.5s ease;
+}
+
+.headers {
+  background-color: #00486c;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+  align-items: center;
+  font-size: 0.8rem;
+  animation: mulse 0.5s ease;
+  animation: pulse 0.5s ease;
+}
+
+.block_img {
+  width: 100px;
+  height: 100px;
+  margin-top: 5px;
+  position: absolute;
+  right: 42rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0rem;
+  animation: start 0.5s ease;
+}
+.block_img_end {
+  width: 100px;
+  margin-top: 5px;
+  height: 100px;
+  background-color: #00486c;
+  border-radius: 100%;
+  position: absolute;
+  right: 42rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.509);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0rem;
+  animation: end 0.5s ease;
+}
+.nav_block {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+a {
+  color: white;
+}
+.nav {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.img {
+  width: 80px;
+  height: 80px;
+  margin-left: 2px;
+}
+
+@keyframes end {
+  0% {
+    background-color: #00486c00;
+    transform: rotate(90deg);
+  }
+  100% {
+    background-color: #00486c;
+  }
+}
+@keyframes start {
+  0% {
+    background-color: #00486c;
+    transform: rotate(-90deg);
+  }
+  100% {
+    background-color: #00486c00;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #00486c00;
+  }
+  100% {
+    background-color: #00486c;
+  }
+}
+@keyframes mulse {
+  0% {
+    background-color: #00486c;
+  }
+  100% {
+    background-color: #00486c00;
+  }
+}

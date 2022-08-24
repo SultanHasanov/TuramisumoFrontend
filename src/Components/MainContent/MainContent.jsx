@@ -1,12 +1,11 @@
 import React from 'react'
-import styles from './MainContent.module.css'
 import MainWelcome from './MainWelcome/MainWelcome'
-
+import '../../scss/main/mainContent.scss'
 const MainContent = () => {
   return (
-      <main className={styles.main}>
-          <MainWelcome />
-      </main>
+    <main className='main'>
+      <MainWelcome />
+    </main>
   )
 }
 
