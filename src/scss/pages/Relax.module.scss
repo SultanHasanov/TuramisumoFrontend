@@ -1,0 +1,81 @@
+.relax {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url("http://www.elathemes.com/themes/colina/assets/images/header-1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #00486c;
+    margin: auto;
+    font-family: 'Playfair Display', serif;
+    flex: 1 1 auto;
+}
+
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 6.5rem;
+    h1 {
+        font-size: 1.8rem;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 50%);
+        font-weight: 100;
+    }
+
+}
+
+.main_relax {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    margin-top: 10rem;
+}
+
+.container {
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    height: auto;
+    margin: 2rem 0rem;
+}
+
+.image_block {
+    width: 35%;
+    margin: 1rem 0rem;
+    display: flex;
+    img {
+        width: 100%;
+    }
+}
+
+.descrip {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 1rem;
+    flex-direction: column;
+    width: 60%;
+    span {
+        color: white;
+        line-height: 1.5rem;
+        font-size: 1.2rem;
+    }
+    h1 {
+        color: white;
+        margin-bottom: 1rem;
+    }
+}
+
+
+section {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
