@@ -1,0 +1,80 @@
+.main {
+    width: 100%;
+    flex: 1 1 auto;
+    background-image: url("http://www.elathemes.com/themes/colina/assets/images/header-1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.pricesTitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    color: white;
+    h1 {
+        font-size: 1.8rem;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 50%);
+        font-weight: 100;
+    }
+}
+
+.pricesTitle1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pricesText {
+    width: 100%;
+    display: flex;
+    line-height: 1.7rem;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.mainContent {
+    background-color: #00486c;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    margin: 5rem auto;
+    width: 80%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 1rem;
+    border-collapse: collapse;
+    text-align: center;
+    }
+    th, td:first-child {
+    background: #AFCDE7;
+    color: white;
+    margin: 1rem;
+    }
+    th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+    }
+    tr {
+        td {
+            margin: 10rem;
+            text-align: center;
+        }
+    }
+    td {
+    background: #D8E6F3;
+    }
+    th:first-child, td:first-child {
+    text-align: left;
+    }
+
+    .num {
+        text-align: left;
+        padding: 2rem;
+    }
