@@ -3,8 +3,8 @@ import axios from "axios"
 
 
 const initialState = {
-    rooms: [],
     loadingRooms: false,
+    rooms: [],
     error: null
 }
 
@@ -27,14 +27,15 @@ const roomSlice = createSlice({
         builder
         .addCase(getRooms.pending, (state, action) => {
             state.loadingRooms = true
+            
         })
         .addCase(getRooms.fulfilled, (state, action) => {
-            state.loadingRooms = false
             state.rooms = action.payload
+            state.loadingRooms = false
         })
         .addCase(getRooms.rejected, (state, action) => {
             state.error = action.payload
-            state.loadingRooms = false
+          
         })
     }
 })
