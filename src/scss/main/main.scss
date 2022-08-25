@@ -1,8 +1,7 @@
 .main {
   width: 100%;
   background-size: 100%;
-  background: linear-gradient(rgba(59, 120, 137, 0.8), rgba(0, 0, 0, 0.5)),
-  url('http://www.elathemes.com/themes/colina/assets/images/slide-3.jpg');
+  flex: 1 1 auto;
   background-repeat: no-repeat;
   font-family: 'Playfair Display', serif;
 }
