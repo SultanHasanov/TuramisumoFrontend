@@ -13,12 +13,8 @@ import Relax from './pages/Relax/Relax'
 function App() {
   return (
     <div className='App'>
-      <MainContent />
-      <MainRooms />
-      <MainSlice/>
       <Routes>
         <Route path='/' element={<MainContent />}/>
-        <Route path='/' element={<MainRooms />}/>
         <Route path='/hostel' element={<HostelInfo />}/>
         <Route path='/relax' element={<Relax />}/>
         <Route path='/prices' element={<Prices />}/>
