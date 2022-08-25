@@ -6,7 +6,7 @@
   justify-content: center;
   height: 4rem;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
   animation: mulse 0.5s ease;
 }
 
@@ -15,11 +15,12 @@
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 1;
   display: flex;
   justify-content: center;
   height: 4rem;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
   animation: mulse 0.5s ease;
   animation: pulse 0.5s ease;
 }
