@@ -35,6 +35,25 @@
 
 .container {
     width: 100%;
+    margin-top: 3rem;
+    button {
+        width: 25rem;
+        font-size: 1.5rem;
+        border: none;
+        font-family: 'Playfair Display', serif;
+        height: 4rem;
+        transition-duration: 0.3s;
+        cursor: pointer;
+        background-color: rgb(206, 176, 113);
+        margin-bottom: 2.5rem;
+        color: white;
+        &:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.1);
+            transition-duration: 0.3s;
+        }
+    }
 }
 
 .card {
