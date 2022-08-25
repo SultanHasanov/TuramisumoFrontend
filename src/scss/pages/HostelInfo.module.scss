@@ -3,10 +3,10 @@
     width: 100%;
     color: white;
     height: 100vh;
+    background-image: url("http://www.elathemes.com/themes/colina/assets/images/header-1.jpg");
     background-size: 100%;
-    background: linear-gradient(rgba(59, 120, 137, 0.8), rgba(0, 0, 0, 0.5)),
-    url('http://andrewch.eu/XENIA/assets/images/home-1.jpg');
     background-repeat: no-repeat;
+    background-color: #00486c;
     font-family: 'Playfair Display', serif;
 }
 
@@ -16,30 +16,40 @@
     display: flex;
     display: flex;
     justify-content: center;
-    margin-top: 5.5rem;
+    margin-top: 4.3rem;
+    margin-bottom: 1.5rem;
+    h1 {
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 50%);
+    }
 }
+
 
 .uslugs {
-    width: 100%;
-    text-align: center;
-    margin-top: 1.3rem;
-    display: flex;
-    flex-direction: column;
-    line-height: 2.2rem;
-    span {
-        font-weight: 100;
-    }
-    h2 {
-        font-weight: 100;
-        font-size: 2rem;
-        margin-top: 1.2rem;
-    }
-}
-
-
-.description {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
+    width: 60%;
     margin: auto;
+    display: flex;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    text-align: center;
+    justify-content: center;
 }
+
+
+section {
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    img{
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+  }
+
+  .container {
+      width: 100%;
+      display: flex;
+  }
