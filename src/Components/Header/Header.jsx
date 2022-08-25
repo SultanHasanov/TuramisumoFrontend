@@ -40,7 +40,7 @@ const Header = () => {
 
         <ul className="nav_block">
           <li>
-            <Link to="/turism">Деловой туризм</Link>
+            <Link to="/territory">Территория</Link>
           </li>
           <li>
             <Link to="/contacts">Контакты</Link>

@@ -8,6 +8,7 @@ import MainSlice from './Components/MainContent/MainSlice/MainSlice'
 import HostelInfo from './pages/HostelInfo/HostelInfo'
 import Prices from './pages/Prices/Prices'
 import Relax from './pages/Relax/Relax'
+import Territory from './pages/Territory/Territory'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' element={<MainContent />}/>
         <Route path='/hostel' element={<HostelInfo />}/>
         <Route path='/relax' element={<Relax />}/>
+        <Route path='/territory' element={<Territory />} />
         <Route path='/prices' element={<Prices />}/>
       </Routes>
       <Footer />
