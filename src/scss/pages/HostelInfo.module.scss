@@ -1,0 +1,55 @@
+.hostel_main {
+    flex: 1 1 auto;
+    width: 100%;
+    color: white;
+    height: 100vh;
+    background-image: url("http://www.elathemes.com/themes/colina/assets/images/header-1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #00486c;
+    font-family: 'Playfair Display', serif;
+}
+
+
+.title {
+    width: 100%;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    margin-top: 4.3rem;
+    margin-bottom: 1.5rem;
+    h1 {
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 50%);
+    }
+}
+
+
+.uslugs {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    text-align: center;
+    justify-content: center;
+}
+
+
+section {
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    img{
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+  }
+
+  .container {
+      width: 100%;
+      display: flex;
+  }
