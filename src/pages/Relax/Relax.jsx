@@ -4,6 +4,7 @@ import styles from "../../scss/pages/Relax.module.scss";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 function Section({ children }) {
   const ref = useRef(null);
@@ -32,7 +33,7 @@ function TextSection({ children }) {
       <section ref={ref}>
         <span
           style={{
-            transform: isInView ? "translateX(1000px)" : "translateX(600%)",
+            transform: isInView ? "translateX(1100px)" : "translateX(600%)",
             opacity: isInView ? 1 : 0,
             color: "rgb(206, 176, 113)",
             fontWeight: "100",
@@ -40,6 +41,32 @@ function TextSection({ children }) {
             fontSize: "2rem",
             textShadow: "0 2px 5px rgba(0, 0, 0, 50%)",
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
+          }}
+        >
+          {children}
+        </span>
+      </section>
+    );
+  }
+  
+  function ButtonSection({ children }) {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+  
+    return (
+      <section ref={ref}>
+        <span
+          style={{
+            transform: isInView ? "translateX(540px)" : "translateX(-100%)",
+            opacity: isInView ? 1 : 0,
+            fontWeight: "100",
+            width: "30rem",
+            display: "flex",
+            justifyContent: "left",
+            zIndex: 0,
+            fontSize: "2rem",
+            textShadow: "0 2px 5px rgba(0, 0, 0, 50%)",
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
           }}
         >
           {children}
@@ -159,6 +186,11 @@ const Relax = () => {
               </div>
             </div>
           </Section>
+          <ButtonSection>
+              <Link to="/prices">
+                    <button>ПРОСМОТРЕТЬ ЦЕНЫ</button>
+              </Link>
+          </ButtonSection>
         </div>
       </div>
     </div>
