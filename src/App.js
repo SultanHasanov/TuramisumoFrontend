@@ -9,6 +9,7 @@ import HostelInfo from './pages/HostelInfo/HostelInfo'
 import Prices from './pages/Prices/Prices'
 import Relax from './pages/Relax/Relax'
 import Territory from './pages/Territory/Territory'
+import Sea from './pages/Sea/Sea'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/relax' element={<Relax />}/>
         <Route path='/territory' element={<Territory />} />
         <Route path='/prices' element={<Prices />}/>
+        <Route path='/sea' element={<Sea />}/>
       </Routes>
       <Footer />
     </div>
