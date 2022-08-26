@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getRooms } from '../../../features/roomsTypes'
 import '../../../scss/main/mainRooms.scss'
 import Header from '../../Header/Header'
+import { Link } from 'react-router-dom';
 
 const MainRooms = () => {
   const dispatch = useDispatch()
@@ -43,8 +44,10 @@ const MainRooms = () => {
               <div className='name_rooms'>{item.name}</div>
               <div className='todo_text'>Гостиная</div>
               <div className='info_pole_footer'>
+                <Link to="#">
                 <button className='booking_button'>ЗАБРОНИРОВАТЬ СЕЙЧАС</button>
-                <div className='price_info'>299 ₽</div>
+                </Link>
+                <div className='price_info'>{item.price} ₽</div>
               </div>
             </div>
           </div>
@@ -61,8 +64,10 @@ const MainRooms = () => {
             <div className='name_rooms_general'>{item.name}</div>
             <div className='todo_text_general'>Гостиная</div>
             <div className='info_pole_footer_general'>
+              <Link to="#">
               <button className='booking_button_general'>ЗАБРОНИРОВАТЬ СЕЙЧАС</button>
-              <div className='price_info_general'>299 ₽</div>
+              </Link>
+              <div className='price_info_general'>{item.price} ₽</div>
             </div>
           </div>
         </div>
