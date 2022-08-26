@@ -95,7 +95,7 @@ const Relax = () => {
             <div className={styles.card}>
               <div className={styles.image_block}>
                 <img
-                  src="https://www.s-caspiy.ru/content/images/20210706_101942.jpg"
+                  src="https://www.s-caspiy.ru/content/images/20200117_153908.jpg"
                   alt=""
                 />
               </div>
