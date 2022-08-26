@@ -1,0 +1,85 @@
+.contact_main {
+    width: 100%;
+    flex: 1 1 auto;
+    width: 100%;
+    flex: 1 1 auto;
+    font-family: 'Playfair Display', serif;
+    background-image: url("http://www.elathemes.com/themes/colina/assets/images/header-1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+.contactsTitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    color: white;
+
+    h1 {
+        font-size: 1.8rem;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 50%);
+        font-weight: 100;
+    }
+}
+
+.contactsTitle1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content_main {
+    
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content:space-evenly;
+    margin: 15rem auto;
+    
+
+}
+
+.address {
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    background-color: #00486c;
+    width: 400px;
+    height: 630px;
+    border: solid 1px black;
+    border-radius: 20px;
+    color: white;
+    margin: 20px;
+    .icon {
+            color: rgb(206, 176, 113);
+            font-size: 40px;
+        }
+    p {
+        margin: 10px 0;
+    }
+}
+
+.map {
+    width: 760px;
+    height: 500px;
+}
+
+.bloc_address {
+    margin-left: 20px;
+}
+
+.icon_address {
+    display: flex;
+    margin: 10px;
+}
+
+.map {
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.map_cart {
+    width: 100%;
+    height: 100%;
+}

@@ -5,6 +5,7 @@ import Header from './Components/Header/Header'
 import MainContent from './Components/MainContent/MainContent'
 import MainRooms from './Components/MainContent/MainRooms/MainRooms'
 import MainSlice from './Components/MainContent/MainSlice/MainSlice'
+import Contact from './pages/Contact/Contact'
 import HostelInfo from './pages/HostelInfo/HostelInfo'
 import Prices from './pages/Prices/Prices'
 import Relax from './pages/Relax/Relax'
@@ -18,6 +19,7 @@ function App() {
     <div className='App'>
       <Routes>
         <Route path='/' element={<MainContent />}/>
+        <Route path="/contacts" element={<Contact />} />
         <Route path='/hostel' element={<HostelInfo />}/>
         <Route path='/relax' element={<Relax />}/>
         <Route path='/territory' element={<Territory />} />
