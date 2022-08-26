@@ -3,10 +3,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getRooms } from '../../../features/roomsTypes'
 import '../../../scss/main/mainRooms.scss'
 import Header from '../../Header/Header'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const MainRooms = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getRooms())
@@ -56,7 +57,7 @@ const MainRooms = () => {
     })
     const bottom = remainder.map((item) => {
       return (
-        <div className='general_rooms'>
+        <div onClick={() => navigate(`/room/${item._id}`)} className='general_rooms'>
           <div className='general_image'>
             <img src={item.images[0]} alt='err' />
           </div>
