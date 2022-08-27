@@ -21,7 +21,9 @@ const Territory = () => {
         </div>
         <div className={styles.carta_image}>
             <div className={styles.marker_1}>
-                <img src={location} alt="" />
+                <a href="https://www.s-caspiy.ru/vtour/progulka/tour.html?startscene=18" target="_blank">
+                    <img src={location} alt="" />
+                </a>
             </div>
             <div className={styles.icon_beach}>
                 <img src={beach} alt="" />

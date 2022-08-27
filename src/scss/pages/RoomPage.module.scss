@@ -1,0 +1,138 @@
+.room_main {
+    width: 100%;
+    flex: 1 1 auto;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("http://www.elathemes.com/themes/colina/assets/images/header-1.jpg");
+}
+
+
+.title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 4rem auto;
+    h1 {
+        font-size: 2.6rem;
+        font-weight: 100;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 50%);
+    }
+    span {
+        margin-top: 0.5rem;
+    }
+}
+
+
+.descrip {
+    width: 80%;
+    margin: auto;
+}
+
+
+.image_block {
+    width: 60%;
+    margin: 0rem auto 3rem auto;
+    height: 30rem;
+    background-position: center;
+    background-size: 100%;
+    background-image: url("http://www.elathemes.com/themes/colina/assets/images/room-1.jpg");
+    img {
+        width: 100%;
+    }
+}
+
+
+.room_aminit {
+    width: 100%;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    h1 {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0rem 1.5rem 0rem;
+        font-weight: 100;
+    }
+}
+
+
+.line {
+    width: 13%;
+    margin: auto;
+    height: 0.5px;
+    background-color: rgb(208, 200, 200);
+    margin-bottom: 3rem;
+}
+
+.line_2 {
+    width: 60%;
+    height: 0.5px;
+    margin: 2.3rem auto 2rem auto;
+    background-color: rgb(208, 200, 200);
+}
+
+.uslugs {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+}
+
+
+.usluga_1 {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    span {
+        font-weight: 100;
+        margin: 0.2rem 0rem 1rem 0rem;
+    }
+}
+
+
+.overview {
+    width: 60%;
+    margin: 0rem auto 2rem auto;
+    h1 {
+        margin-top: 2rem;
+    }
+    span {
+        font-weight: 100;
+        line-height: 1.6rem;
+    }
+}
+
+
+.home_rules {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    h2 {
+        width: 50%;
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+    span {
+        width: 50%;
+        display: flex;
+        font-size: 1.1rem;
+        justify-content: left;
+    }
+}
+
+
+.line_3 {
+    width: 100%;
+    height: 0.5px;
+    margin: 2.5rem auto 2rem auto;
+    background-color: rgb(208, 200, 200);
+}
