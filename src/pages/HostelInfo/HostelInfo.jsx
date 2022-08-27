@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../Components/Header/Header";
 import styles from "../../scss/pages/HostelInfo.module.scss";
+import ReactDOM from "react-dom"
 import lounger from "./lounger.png";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import suns from "./suns.png";
 import clouds from "./clouds.png";
+import ReactWeather, { useOpenWeather } from 'react-open-weather';
 
 function Section({ children }) {
   const ref = useRef(null);
@@ -92,12 +94,42 @@ const displayTime =
 
 
 const HostelInfo = () => {
+  const [currentWeather, setCurrentWeather] = useState(null);
+  const [forecast, setForecast] = useState(null);
+
+  const handleOnSearchChange = (searchData) => {
+    const [lat, lon] = searchData.value.split(" ");
+
+    const currentWeatherFetch = fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=7ad07aac9b0943040a4abdd2c23dfc4e&units=metric`
+    );
+    const forecastFetch = fetch(
+      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=7ad07aac9b0943040a4abdd2c23dfc4e&units=metric`
+    );
+
+    Promise.all([currentWeatherFetch, forecastFetch])
+      .then(async (response) => {
+        const weatherResponse = await response[0].json();
+        const forcastResponse = await response[1].json();
+
+        setCurrentWeather({ city: searchData.label, ...weatherResponse });
+        setForecast({ city: searchData.label, ...forcastResponse });
+      })
+      .catch(console.log);
+  };
   return (
     <div className={styles.hostel_main}>
       <Header />
       <div className={styles.title}>
         <h1 style={{ color: "rgb(206, 176, 113)" }}>{mouthDate}</h1>
       </div>
+      <ReactWeather
+        forecast="5days"
+        apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
+        type="city"
+        city="Munich"
+      />
+
     </div>
   );
 };
