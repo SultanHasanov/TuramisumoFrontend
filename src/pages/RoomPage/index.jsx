@@ -33,7 +33,9 @@ const RoomPage = () => {
           <span>Ваше удобство для нас на первом месте!</span>
         </div>
         <div className={styles.descrip_main}>
-          <div className={styles.image_block}></div>
+          <div className={styles.image_block}>
+            <button>ЗАБРОНИРОВАТЬ</button>
+          </div>
           <div className={styles.room_aminit}>
             <h1>Удобства в номере</h1>
             <div className={styles.line}></div>

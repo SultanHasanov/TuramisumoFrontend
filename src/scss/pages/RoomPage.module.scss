@@ -37,11 +37,34 @@
     width: 60%;
     margin: 0rem auto 3rem auto;
     height: 30rem;
+    align-items: flex-end;
+    justify-content: right;
+    display: flex;
     background-position: center;
     background-size: 100%;
     background-image: url("http://www.elathemes.com/themes/colina/assets/images/room-1.jpg");
     img {
         width: 100%;
+    }
+    button {
+        border: 0.5px solid white;
+        width: 35%;
+        margin: 0rem 1rem 1rem 0rem;
+        align-items: center;
+        font-size: 1.1rem;
+        cursor: pointer;
+        color: white;
+        background-color: transparent;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        height: 3.5rem;
+        transition-duration: 0.3s;
+        &:hover {
+            transition-duration: 0.3s;
+            color: black;
+            background-color: rgb(255, 255, 255);
+        }
     }
 }
 
