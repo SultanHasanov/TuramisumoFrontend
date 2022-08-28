@@ -1,10 +1,8 @@
 .contact_main {
     width: 100%;
     flex: 1 1 auto;
-    width: 100%;
-    flex: 1 1 auto;
-    font-family: 'Playfair Display', serif;
-    background-image: url("http://www.elathemes.com/themes/colina/assets/images/header-1.jpg");
+    font-family: "Playfair Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-image: url("https://storage.googleapis.com/theme-vessel-items/checking-sites/hotel-alpha-html/HTML/main/img/img-3.png");
     background-size: 100%;
     background-repeat: no-repeat;
 
@@ -13,13 +11,13 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 5rem;
+    margin-top: 6rem;
     color: white;
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
         text-shadow: 0 2px 5px rgba(0, 0, 0, 50%);
-        font-weight: 100;
+        font-weight: 200;
     }
 }
 
@@ -44,9 +42,9 @@
     display: flex;
     justify-content:space-between;
     flex-direction: column;
+    height: 45rem;
     background-color: #00486c;
-    width: 400px;
-    height: 630px;
+    width: 45%;
     border: solid 1px black;
     border-radius: 20px;
     color: white;
@@ -60,13 +58,13 @@
     }
 }
 
-.map {
-    width: 760px;
-    height: 500px;
-}
+
 
 .bloc_address {
     margin-left: 20px;
+    h1 {
+        font-size: 1.4rem;
+    }
 }
 
 .icon_address {
@@ -75,8 +73,7 @@
 }
 
 .map {
-    margin: 20px;
-    border-radius: 20px;
+    width: 45%;
 }
 
 .map_cart {
