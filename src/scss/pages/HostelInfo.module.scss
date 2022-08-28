@@ -14,13 +14,26 @@
 .title {
     width: 100%;
     display: flex;
-    display: flex;
+    margin: auto;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 3.3rem;
-    margin-bottom: 1.5rem;
     h1 {
+        margin: 2rem auto;
         font-size: 5.5rem;
         text-shadow: 0 2px 5px rgba(0, 0, 0, 50%);
+    }
+    span {
+        margin: auto;
+    }
+    input {
+        width: 50%;
+        height: 3rem;
+        margin: auto;
+        outline: none;
+        font-size: 1.5rem;
+        border: none;
+        color: #767676;
+        background-color: transparent;
     }
 }
 
@@ -31,3 +44,43 @@ section {
     justify-content: center;
     overflow: hidden;
   }
+
+
+.title_weather {
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    margin: auto;
+    font-size: 2rem;
+}
+
+
+.result_weather {
+    h1 {
+        font-size: 3rem;
+        font-weight: 100;
+        margin: 2.3rem 0rem;
+    }
+    span {
+        font-weight: 100;
+        font-size: 4rem;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20rem;
+        margin: auto;
+        height: 6rem;
+        text-align: center;
+        background-color: #00486c;
+        border-radius: 0.5rem;
+    }
+    width: 100%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
