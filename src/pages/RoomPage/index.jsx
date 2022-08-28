@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "../../scss/pages/RoomPage.module.scss";
 import { getRooms } from "../../features/roomsTypes";
@@ -14,6 +14,7 @@ import { MdFoodBank } from "react-icons/md";
 const RoomPage = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
+  const navigate = useNavigate()
   const rooms = useSelector((state) => state.room.rooms);
   const loading = useSelector((state) => state.room.loadingRooms);
   const room = rooms.find((item) => item._id === id);
@@ -34,9 +35,7 @@ const RoomPage = () => {
         </div>
         <div className={styles.descrip_main}>
           <div className={styles.image_block}>
-            <Link to="/booking">
-            <button>ЗАБРОНИРОВАТЬ</button>
-            </Link>
+            <button onClick={() => navigate(`/buy-room/${room._id}`)}>ЗАБРОНИРОВАТЬ</button>
           </div>
           <div className={styles.room_aminit}>
             <h1>Удобства в номере</h1>
@@ -72,8 +71,8 @@ const RoomPage = () => {
                 отдыха вдали от дома. Пребывание здесь - это не только здоровый
                 и полноценный отдых, но и отличная возможность проживать в
                 условиях, максимально приближенных к домашним. Приезжайте в
-                санаторий «Turamisumo», располагайтесь в удобных номерах и
-                будьте, как дома!
+                санаторий «Turamisumo», располагайтесь в удобных номерах и будьте,
+                как дома!
               </span>
             </div>
             <div className={styles.overview}>
@@ -107,9 +106,7 @@ const RoomPage = () => {
                 <h2>Дополнительная информация:</h2>
                 <span>
                   При сильных шумах соседей обращаться к администрации, или
-                  написать в службу поддержки. Если сосед не вразумился, и не
-                  собирается сбрасывать свой темп, то у нас есть услуга Лерг
-                  улле т1ар, помогает и расслабляет! Служба поддержки работает
+                  написать в службу поддержки. Если сосед не вразумился, и не собирается сбрасывать свой темп, то у нас есть услуга Лерг улле т1ар, помогает и расслабляет! Служба поддержки работает
                   круглосуточно, все ваши вопросы будут решены моментально!
                 </span>
               </div>
