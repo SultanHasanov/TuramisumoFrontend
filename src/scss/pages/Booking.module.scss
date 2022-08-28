@@ -1,8 +1,9 @@
 .booking_bloc {
-    margin: 0px;
-    margin-left: 90px;
-    // background-color: #eee;
-
+    width: 100%;
+    background-size: 100%;
+    flex: 1 1 auto;
+    background-repeat: no-repeat;
+    background-image: url("http://www.elathemes.com/themes/colina/assets/images/header-1.jpg");
 }
 
 .header {
@@ -11,24 +12,20 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 3px;
+    span {
+
+    }
 }
-
-span {
-    padding: 15px;
-    // background-color: white;
-}
-
-
 
 .photo {
     width: 635px;
     height: 364;
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
-img {
-    width: 100%;
-    height: 100%;
-}
 
 .service_bloc1 {
     /* margin-top: 1px; */
@@ -88,34 +85,34 @@ img {
     background-color: white;
     /* display: flex;
     justify-content:left; */
+    h1 {
+        // background-color: white;
+        font-weight: normal;
+        margin: 20px;
+    }
+    form {
+        margin: 0 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // justify-content: center;
+        background-color: white;
+        input {
+            background-color: white;
+            width: 250px;
+            height: 46px;
+            border: 1px solid;
+            /* margin-top: 30px; */
+            border-color: rgba(0, 0, 0, 0.2);
+            outline: 0 !important;
+            margin-bottom: 20px;
+        }
+    }
 }
 
-h1 {
-    // background-color: white;
-    font-weight: normal;
-    margin: 20px;
-}
 
 
-form {
-    margin: 0 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    // justify-content: center;
-    background-color: white;
-}
 
-input {
-    background-color: white;
-    width: 250px;
-    height: 46px;
-    border: 1px solid;
-    /* margin-top: 30px; */
-    border-color: rgba(0, 0, 0, 0.2);
-    outline: 0 !important;
-    margin-bottom: 20px;
-}
 
 .inp3 {
     width: 100%;
