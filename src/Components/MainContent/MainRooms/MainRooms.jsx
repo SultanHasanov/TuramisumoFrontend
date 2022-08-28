@@ -5,6 +5,7 @@ import '../../../scss/main/mainRooms.scss'
 import Header from '../../Header/Header'
 import { Link, useNavigate } from 'react-router-dom';
 
+
 const MainRooms = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();

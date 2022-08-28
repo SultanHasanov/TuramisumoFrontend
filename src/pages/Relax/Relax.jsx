@@ -2,9 +2,9 @@ import React from "react";
 import Header from "../../Components/Header/Header";
 import styles from "../../scss/pages/Relax.module.scss";
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import { Link } from 'react-router-dom';
 
 function Section({ children }) {
   const ref = useRef(null);

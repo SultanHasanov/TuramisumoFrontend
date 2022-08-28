@@ -1,29 +1,31 @@
 .hostel_main {
     flex: 1 1 auto;
     width: 100%;
+    height: 95vh;
     color: white;
-    height: 100vh;
-    background-image: url("http://andrewch.eu/XENIA/assets/images/home-1.jpg");
+    background-image: url("http://andrewch.eu/XENIA/assets/images/home-location.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: #00486c;
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 
 .title {
     width: 100%;
     display: flex;
-    margin: auto;
+    margin: 2rem auto;
     flex-direction: column;
     justify-content: center;
     h1 {
         margin: 2rem auto;
+        font-weight: 200;
         font-size: 5.5rem;
         text-shadow: 0 2px 5px rgba(0, 0, 0, 50%);
     }
     span {
         margin: auto;
+        font-weight: 100;
     }
     input {
         width: 50%;
@@ -33,6 +35,7 @@
         font-size: 1.5rem;
         border: none;
         color: #767676;
+        font-weight: 100;
         background-color: transparent;
     }
 }
