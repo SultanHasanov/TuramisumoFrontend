@@ -38,7 +38,7 @@ const MainRooms = () => {
     const upper = business.map(item => {
       return (
         
-          <div className='business_rooms_el'>
+          <div className='business_rooms_el' onClick={() => navigate(`/room/${item._id}`)}>
             <div className='business_image'>
               <img src={item.images[0]} alt='err' />
             </div>

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../Components/Header/Header";
 import styles from "../../scss/pages/HostelInfo.module.scss";
 import { useState } from "react";
+import { useEffect } from "react";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import sun from "./suns.png";
@@ -12,17 +13,17 @@ const HostelInfo = () => {
   const [weatherData, setWeatherData] = useState([{}]);
   const [city, setCity] = useState("");
 
-  const getWeather = (e) => {
-    if (e.key === "Enter") {
       fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=${apikey}`
+        `https://api.openweathermap.org/data/2.5/weather?q=Izberbash&units=imperial&APPID=${apikey}`
       )
         .then((response) => response.json())
         .then((data) => {
           setWeatherData(data);
         });
-    }
-  };
+
+  // useEffect(() => {
+  //   getWeather()
+  // }, [])
 
   function Section({ children }) {
     const ref = useRef(null);
@@ -47,19 +48,11 @@ const HostelInfo = () => {
     <div className={styles.hostel_main}>
       <Header />
       <div className={styles.title}>
-        <h1 style={{ color: "rgb(206, 176, 113)" }}>Узнавайте погоды!</h1>
+        <h1 style={{ color: "rgb(206, 176, 113)" }}>Погода в Избербаше!</h1>
         <span></span>
-        <input
-          type="text"
-          onKeyPress={getWeather}
-          required
-          placeholder="Введите город..."
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
       </div>
       {typeof weatherData.main === "undefined" ? (
-        <div className={styles.title_weather}>Введите в поле город</div>
+        <div className={styles.title_weather}></div>
       ) : (
         <>
           <div className={styles.result_weather}>
