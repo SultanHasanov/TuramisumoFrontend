@@ -12,6 +12,7 @@ import Relax from './pages/Relax/Relax'
 import Territory from './pages/Territory/Territory'
 import RoomPage from './pages/RoomPage/index';
 import Sea from './pages/Sea/Sea'
+import Booking from './pages/Booking/Booking'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/prices' element={<Prices />}/>
         <Route path='/room/:id' element={<RoomPage />} />
         <Route path='/sea' element={<Sea />}/>
+        <Route path='/booking' element={<Booking />} />
       </Routes>
       <Footer />
     </div>
