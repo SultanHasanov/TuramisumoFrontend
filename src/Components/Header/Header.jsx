@@ -22,7 +22,7 @@ const Header = () => {
       <nav className="nav">
         <ul className="nav_block">
           <li>
-            <Link to="/hostel">Об Отеле</Link>
+            <Link to="/hostel">Погода</Link>
           </li>
           <li>
             <Link to="/prices">Цены</Link>
