@@ -2,6 +2,7 @@ import React from 'react'
 import '../../../scss/main/mainSlice.scss'
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 function Section({ children }) {
   const ref = useRef(null);
@@ -41,15 +42,16 @@ function MainSlice(props) {
             </div>
           </div>
         </li>
-        <li className='stretcher'>
-          <div className='img_fea'>
-            <span>РЕСТОРАН</span>
-            <div className='rising_text'>
-              РЕСТОРАН
-             
+          <li className='stretcher'>
+            <Link to="/restoran">
+            <div className='img_fea'>
+              <span>РЕСТОРАН</span>
+              <div className='rising_text'>
+                РЕСТОРАН
+              </div>
             </div>
-          </div>
-        </li>
+            </Link>
+          </li>
         <li className='stretcher'>
           <div className='img_pua'>
             <span>БАСЕЙН</span>

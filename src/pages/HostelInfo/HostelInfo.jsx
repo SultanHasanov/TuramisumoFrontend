@@ -7,22 +7,22 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 import sun from "./suns.png";
 
-const apikey = "aa19d79f332adb84786cec8a761e4598";
+const apikey = "3051b614760cfe60a6cb30ff29aded0a";
 
 const HostelInfo = () => {
   const [weatherData, setWeatherData] = useState([{}]);
   const [city, setCity] = useState("");
 
-      fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=Izberbash&units=imperial&APPID=${apikey}`
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          setWeatherData(data);
-        });
+
 
   // useEffect(() => {
-  //   getWeather()
+  //   fetch(
+  //     `https://api.openweathermap.org/data/2.5/weather?q=Izberbash&units=imperial&APPID=${apikey}`
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setWeatherData(data);
+  //     });
   // }, [])
 
   function Section({ children }) {
