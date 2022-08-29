@@ -14,6 +14,7 @@ import RoomPage from './pages/RoomPage/index';
 import Sea from './pages/Sea/Sea'
 import Restoran from './pages/Restoran/Restoran'
 import Booking from './pages/Booking/Booking'
+import Menu from './pages/Menu/Menu'
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path='/restoran' element={<Restoran />} />
         <Route path='/sea' element={<Sea />}/>
         <Route path='/buy-room/:id' element={<Booking />} />
+        <Route path='/menu' element={<Menu />} />
       </Routes>
       <Footer />
     </div>
