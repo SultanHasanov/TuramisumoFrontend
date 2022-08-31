@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import Header from "../../Components/Header/Header";
+import { addProductInCart } from '../../features/cartSlice';
 import { getProducts } from '../../features/productSlice';
 import styles from '../../scss/pages/Menu.module.scss'
 // import { useAlert } from 'react-alert';
@@ -43,6 +44,10 @@ const Menu = () => {
     setPrice2(false);
     setWords(e.target.value);
   };
+
+  const handleBuy = (id) => {
+    dispatch(addProductInCart(id))
+  }
 
   // const handleOrder = () => {
   //   setMessage(true)
@@ -105,6 +110,7 @@ const Menu = () => {
                   <p>
                     <b>Цена:</b> {el.price} ₽
                   </p>
+                  <button onClick={() => handleBuy(el._id)}>Купить</button>
                   {/* <button
                     onClick={() => {
                       alert.show("Oh look, an alert!");
@@ -133,6 +139,7 @@ const Menu = () => {
                   <p>
                     <b>Цена:</b> {el.price} ₽
                   </p>
+                  <button onClick={() => handleBuy(el._id)}>Купить</button>
                 </div>
               ))}
           </div>
@@ -154,6 +161,7 @@ const Menu = () => {
                   <p>
                     <b>Цена:</b> {el.price} ₽<p>₽</p>
                   </p>
+                  <button onClick={() => handleBuy(el._id)}>Купить</button>
                 </div>
               ))}
           </div>
