@@ -14,6 +14,8 @@ import RoomPage from './pages/RoomPage/index';
 import Sea from './pages/Sea/Sea'
 import Restoran from './pages/Restoran/Restoran'
 import Booking from './pages/Booking/Booking'
+import CartPage from './pages/Cart/Cart'
+import Menu from './pages/Menu/Menu'
 import { useSelector } from 'react-redux'
 import WelcomeCard from './pages/WelcomeCard/WelcomeCard'
 
@@ -44,6 +46,8 @@ function App() {
     return (
       <div className='App'>
         <Routes>
+          <Route path='/menu' element={<Menu />} />
+          <Route path='/cart' element={<CartPage />} />
           <Route path='/' element={<MainContent />}/>
           <Route path="/contacts" element={<Contact />} />
           <Route path='/hostel' element={<HostelInfo />}/>
@@ -60,6 +64,5 @@ function App() {
       </div>
     )
   }
-}
 
 export default App
