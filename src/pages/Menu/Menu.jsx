@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import Header from "../../Components/Header/Header";
+import { addProductInCart, getCart } from '../../features/cartSlice';
 import { getProducts } from '../../features/productSlice';
 import styles from '../../scss/pages/Menu.module.scss'
 
@@ -20,6 +21,10 @@ const Menu = () => {
       dispatch(getProducts())
     }, [dispatch])
 
+    useEffect(() => {
+      dispatch(getCart());
+    }, [dispatch]);
+
     const food = useSelector((state) => state.products.products)
 
   
@@ -28,6 +33,7 @@ const Menu = () => {
         setAll(false)
         setPrice(true)
         setPrice2(false)
+        localStorage.setItem("user", "630ef67d62edf909c51b9375")
     }
 
     const handlePrice2 = () => {
@@ -48,6 +54,10 @@ const Menu = () => {
     //   setCount(true)
     //   setPrice2(false)
     // }
+
+    const handleBuy = (id) => {
+      dispatch(addProductInCart(id))
+    }
 
     return (
       <div className={styles.main_menu}>
@@ -97,6 +107,7 @@ const Menu = () => {
                     <p>
                       <b>Цена:</b> {el.price} ₽
                     </p>
+                    <button onClick={() => handleBuy(el._id)}>Купить</button>
                   </div>
                 ))}
             </div>

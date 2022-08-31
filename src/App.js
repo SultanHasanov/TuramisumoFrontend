@@ -15,6 +15,7 @@ import Sea from './pages/Sea/Sea'
 import Restoran from './pages/Restoran/Restoran'
 import Booking from './pages/Booking/Booking'
 import Menu from './pages/Menu/Menu'
+import CartPage from './pages/Cart/Cart'
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path='/sea' element={<Sea />}/>
         <Route path='/buy-room/:id' element={<Booking />} />
         <Route path='/menu' element={<Menu />} />
+        <Route path='/cart' element={<CartPage />} />
       </Routes>
       <Footer />
     </div>
