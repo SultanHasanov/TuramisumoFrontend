@@ -1,0 +1,223 @@
+.booking_bloc {
+    width: 100%;
+    flex: 1 1 auto;
+    background-color: whitesmoke;
+    font-family: "Playfair Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("http://www.elathemes.com/themes/colina/assets/images/header-1.jpg");
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+    h1 {
+        color: white;
+        font-size: 2.6rem;
+        font-weight: 200;
+        margin: 1rem 0rem;
+    }
+    span {
+        width: 70%;
+        text-align: center;
+        color: white;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+.payment {
+    width: 80%;
+    display: flex;
+    margin: 3rem auto;
+    background-color: white;
+    justify-content: space-between;
+}
+
+
+.form_block {
+    padding: 1rem;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    margin: 0rem auto 3rem auto;
+}
+
+
+.register {
+    width: 100%;
+    margin: 2rem 0rem 0rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    span {
+        font-size: 1.4rem;
+    }
+}
+
+.oplata_block {
+    width: 48%;
+}
+
+
+.line {
+    width: 100%;
+    margin: auto;
+    height: 0.5px;
+    background-color: rgb(208, 200, 200);
+    margin: 2rem 0rem;
+}
+
+.line_2 {
+    width: 100%;
+    margin: auto;
+    margin: 1rem 0rem 0rem 0rem;
+    height: 0.5px;
+    background-color: rgb(208, 200, 200);
+}
+
+.inputs {
+    width: 100%;
+    margin-bottom: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    input {
+        width: 48%;
+        padding: 0rem 1rem;
+        height: 2.4rem;
+        outline: none;
+        border: 0.1rem solid whitesmoke ;
+    }
+}
+
+
+.name_form {
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.license {
+    width: 100%;
+    display: flex;
+    margin: 1rem 0rem 0rem 0rem;
+    justify-content: left;
+    span {
+        width: 100%;
+        font-weight: 300;
+        font-size: 0.9rem;
+    }
+    input {
+        width: 5%;
+    }
+    a {
+        color: rgb(0, 115, 255);
+        cursor: pointer;
+    }
+}
+
+
+.btn {
+    width: 100%;
+    display: flex;
+    button {
+        width: 100%;
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+        height: 3.5rem;
+        background-color: #00517a;
+    }
+}
+
+
+.card {
+    width: 42%;
+    margin-bottom: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    input {
+        width: 7%;
+        border: none;
+        background-color: blue;
+    }
+    span {
+        font-weight: 100;
+        font-size: 1.5rem;
+    }
+}
+
+.nal {
+    width: 29%;
+    margin-bottom: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    input {
+        width: 10%;
+        border: none;
+        background-color: blue;
+    }
+    span {
+        font-weight: 100;
+        font-size: 1.5rem;
+    }
+}
+
+
+.card_info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon_oplata {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    span {
+        width: 50%;
+    }
+}
+
+
+.icons {
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    svg {
+        margin: 0rem 1rem;
+        font-size: 1.4rem;
+    }
+}
+
+.card_input {
+    margin: 2rem 0rem;
+    width: 90%;
+    input {
+        height: 2.6rem;
+        width: 100%;
+        outline: none;
+        padding: 1rem;
+        border: 1px solid whitesmoke;
+    }
+}
+
+.card_date {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    input {
+        border: 1px solid whitesmoke;
+        width: 45%;
+        padding: 1rem;
+        height: 2.6rem;
+        outline: none;
+    }
+}
