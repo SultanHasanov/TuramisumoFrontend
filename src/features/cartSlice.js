@@ -33,6 +33,18 @@ export const addProductInCart = createAsyncThunk("cart/add", async (product, thu
     }
 })
 
+
+export const deleteProductFromBasket = createAsyncThunk("delete/cart", async (productId, thunkAPI) => {
+    try {
+        const response = await axios.delete(`http://localhost:4000/cart/${user}`, {data: {product: productId}})
+        console.log(productId)
+        return response.data
+    } catch (error) {
+        console.log(error)
+        thunkAPI.rejectWithValue(error.message)
+    }
+})
+
 const cartSlice = createSlice({
   name: "cart",
   initialState,

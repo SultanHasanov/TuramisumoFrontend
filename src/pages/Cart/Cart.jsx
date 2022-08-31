@@ -5,6 +5,8 @@ import { VscLocation } from "react-icons/vsc";
 import { GiBusStop } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { getCart } from "../../features/cartSlice";
+import { deleteProductFromBasket } from './../../features/cartSlice';
+import Header from "../../Components/Header/Header";
 
 const CartPage = () => {
   const dispatch = useDispatch();
@@ -19,6 +21,7 @@ const CartPage = () => {
 
 
   const handleDelete = (productId) => {
+    dispatch(deleteProductFromBasket(productId))
   };
   const handleIncrement = (productId) => {
   };
@@ -27,7 +30,6 @@ const CartPage = () => {
   };
 
 
-  
 
   if (!loadingCart && cart) {
     const cartProducts = cart.map((product) => {
@@ -35,11 +37,9 @@ const CartPage = () => {
             <>
               <div className={styles.line}></div>
               <div className={styles.card_prod}>
-                {/* <div className={styles.image_block}>
-                  {product.images.map((images) => {
-                      return <img src={images.image} alt="" />;
-                  })}
-                </div> */}
+                <div className={styles.image_block}>
+                   <img src={product.image} alt="" />;
+                </div>
                 <div className={styles.info_prices}>
                   <div className={styles.prod_name}>
                     <span>{product.name}</span>
@@ -71,8 +71,7 @@ const CartPage = () => {
                     </tbody>
                   </table>
                   <div className={styles.next_func}>
-                    <button>Сохранить на потом</button>
-                      Удалить
+                      <button onClick={() => handleDelete(product._id)}>Удалить</button>
                   </div>
                 </div>
               </div>
@@ -82,7 +81,9 @@ const CartPage = () => {
 
     return (
       <div className={styles.back}>
+        <Header />
         <div className={styles.title}>
+
           <h1>КОРЗИНА ПОКУПОК</h1>
         </div>
         <div className={styles.main_content}>
