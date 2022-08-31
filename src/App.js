@@ -1,5 +1,4 @@
 import { Route, Routes, Navigate } from 'react-router-dom'
-import { Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Footer from './Components/Footer/Footer'
 import Header from './Components/Header/Header'
@@ -21,7 +20,6 @@ import Restoran from './pages/Restoran/Restoran'
 import Booking from './pages/Booking/Booking'
 import CartPage from './pages/Cart/Cart'
 import Menu from './pages/Menu/Menu'
-import { useSelector } from 'react-redux'
 import WelcomeCard from './pages/WelcomeCard/WelcomeCard'
 
 function App() {
@@ -43,6 +41,8 @@ function App() {
           <Route path='/sea' element={<Sea />}/>
           <Route path='/buy-room/:id' element={<Booking />} />
           <Route path='/welcome' element={<Navigate to="/" />} />
+          <Route path='/admin/registration' element={<AdminRegistration />} />
+          <Route path='/admin/authorization' element={<AdminAuthorization />} />
         </Routes>
         <Footer />
       </div>
@@ -68,7 +68,7 @@ function App() {
         <Footer />
       </div>
     )
-  } else if(tokenAdmin) {
+  } else if(tokenAdmin !== null) {
       return (
       <div className='App'>
         <Routes>
