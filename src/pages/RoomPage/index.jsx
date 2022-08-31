@@ -1,16 +1,5 @@
 
-
-const RoomPage = () => {
-  const dispatch = useDispatch()
-  const { id } = useParams()
-  const rooms = useSelector(state => state.room.rooms)
-  const loading = useSelector(state => state.room.loadingRooms)
-  const room = rooms.find(item => item._id === id)
-import React, { useEffect } from "react";
 import React, { useEffect, useRef } from 'react'
-import { useParams } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import styles from '../../scss/pages/RoomPage.module.scss'
 import { getRooms } from '../../features/roomsTypes'
 import 'react-slideshow-image/dist/styles.css'
 import { GiSofa } from 'react-icons/gi'
@@ -22,14 +11,8 @@ import { MdFoodBank } from 'react-icons/md'
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "../../scss/pages/RoomPage.module.scss";
-import { getRooms } from "../../features/roomsTypes";
-import "react-slideshow-image/dist/styles.css";
-import { GiSofa } from "react-icons/gi";
-import Header from "../../Components/Header/Header";
-import { MdPeopleOutline } from "react-icons/md";
-import { AiOutlineWifi } from "react-icons/ai";
-import { GiWashingMachine } from "react-icons/gi";
-import { MdFoodBank } from "react-icons/md";
+
+
 
 const RoomPage = () => {
   const dispatch = useDispatch();
