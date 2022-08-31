@@ -170,7 +170,7 @@ const Sea = () => {
             </div>
           </Section>
           <TextSection>
-            <h1>РАЗВЛЕЧЕНИЯ</h1>
+            <h1>Развлечения</h1>
           </TextSection>
           <Section>
             <div className={styles.card}>
