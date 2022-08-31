@@ -7,7 +7,7 @@ document.onscroll = () => {
   const scrollTopPosition = document.documentElement.scrollTop;
   const header = document.querySelector("header");
   const blockImg = document.querySelector("#block_img");
-
+  
   scrollTopPosition === 0
     ? (header.classList = "header")
     : (header.classList = "headers");
