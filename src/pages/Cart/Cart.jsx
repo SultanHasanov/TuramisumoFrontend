@@ -17,7 +17,6 @@ const CartPage = () => {
 
   const cart = useSelector((state) => state.cart.cart.products);
   const loadingCart = useSelector((state) => state.cart.loadingCart);
-  console.log(cart)
 
 
   const handleDelete = (productId) => {
@@ -30,6 +29,8 @@ const CartPage = () => {
   };
 
 
+  localStorage.setItem("token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMGY1ZTU0NjkxYjIwYmUxNzczMThmYiIsImxvZ2luIjoicnIiLCJpYXQiOjE2NjE5NTE1NzMsImV4cCI6MTY2MjAzNzk3M30.CqGzL8s4aPYlS8OCZNUlYH6bVhGUnN7XxdYo-ET3doA")
+  localStorage.setItem("user", "630f5e54691b20be177318fb")
 
   if (!loadingCart && cart) {
     const cartProducts = cart.map((product) => {
