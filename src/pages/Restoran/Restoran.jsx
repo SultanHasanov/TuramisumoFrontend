@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 import Header from "../../Components/Header/Header";
 import styles from "../../scss/pages/Restoran.module.scss";
+import { useDispatch } from 'react-redux';
+import { restRoom, restTable } from "../../features/cartSlice";
+import { Link } from "react-router-dom";
 
 const Restoran = () => {
-  const [table, setTable] = useState(false)
-  const [room, setRoom] = useState(false)
+
+  const dispatch = useDispatch();
 
   const handleTable = () => {
-    setTable(true)
-    setRoom(false)
+    dispatch(restTable())
   }
 
   const handleRoom = () => {
-    setRoom(true)
-    setTable(false)
+    dispatch(restRoom())
   }
+
+
   return (
     <div className={styles.main_res}>
       <Header />
@@ -34,7 +37,7 @@ const Restoran = () => {
             alt=""
             className={styles.image}
           />
-          <button  onClick={handleTable} className={styles.button}>Забронировать столик</button>
+          <button  onClick={handleTable} className={styles.button}><Link to="/menu">Забронировать столик</Link></button>
         </div>
         <div className={styles.choose_room}>
           <img
@@ -42,11 +45,9 @@ const Restoran = () => {
             alt=""
             className={styles.image}
           />
-          <button onClick={handleRoom} className={styles.button}>Заказать в номер</button>
+          <button onClick={handleRoom} className={styles.button}><Link to="/menu">Заказать в номер</Link></button>
         </div>
       </div>
-      {table ? <div>lol</div> : null}
-      {room ? <div>kek</div> : null}
     </div>
   );
 };

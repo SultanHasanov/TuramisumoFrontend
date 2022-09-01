@@ -49,6 +49,7 @@ const Menu = () => {
     dispatch(addProductInCart(id))
   }
 
+  const delivery = localStorage.getItem("delivery")
   // const handleOrder = () => {
   //   setMessage(true)
   //   // alert("Ваш заказ добавлен в карзину");
@@ -110,7 +111,7 @@ const Menu = () => {
                   <p>
                     <b>Цена:</b> {el.price} ₽
                   </p>
-                  <button onClick={() => handleBuy(el._id)}>Купить</button>
+                  {delivery === 'room' && el.categoryId === "63104c2ba42da448c58ffa61" ? <button disabled>Нельзя заказывать  в номер</button> : <button onClick={() => handleBuy(el._id)}>Купить</button>}
                   {/* <button
                     onClick={() => {
                       alert.show("Oh look, an alert!");
@@ -139,7 +140,7 @@ const Menu = () => {
                   <p>
                     <b>Цена:</b> {el.price} ₽
                   </p>
-                  <button onClick={() => handleBuy(el._id)}>Купить</button>
+                  {delivery && el.categoryId === "63104c2ba42da448c58ffa61" ? <button disabled>Нельзя заказывать  в номер</button> : <button onClick={() => handleBuy(el._id)}>Купить</button>}
                 </div>
               ))}
           </div>
@@ -161,7 +162,7 @@ const Menu = () => {
                   <p>
                     <b>Цена:</b> {el.price} ₽<p>₽</p>
                   </p>
-                  <button onClick={() => handleBuy(el._id)}>Купить</button>
+                  {delivery && el.categoryId === "63104c2ba42da448c58ffa61" ? <button disabled>Нельзя заказывать  в номер</button> : <button onClick={() => handleBuy(el._id)}>Купить</button>}
                 </div>
               ))}
           </div>

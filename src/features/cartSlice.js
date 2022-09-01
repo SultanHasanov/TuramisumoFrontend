@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
+  delivery: localStorage.getItem("delivery"),
   loadingCart: false,
   cart: [],
   error: null,
@@ -45,10 +46,47 @@ export const deleteProductFromBasket = createAsyncThunk("delete/cart", async (pr
     }
 })
 
+export const clearBasket = createAsyncThunk("clear/cart", async (_, thunkAPI) => {
+    try {
+        const response = await axios.delete(`http://localhost:4000/cart/clear/${user}`)
+        return response.data
+    } catch (error) {
+        console.log(error)
+        thunkAPI.rejectWithValue(error.message)
+    }
+})
+
+export const productInc = createAsyncThunk("inc/cart", async (product, thunkAPI) => {
+    try {
+        const response = await axios.patch(`http://localhost:4000/cart/inc/${user}`, {product})
+        return response.data
+    } catch (error) {
+        console.log(error)
+        thunkAPI.rejectWithValue(error.message)
+    }
+})
+
+export const productDec = createAsyncThunk("dec/cart", async (product, thunkAPI) => {
+    try {
+        const response = await axios.patch(`http://localhost:4000/cart/dec/${user}`, {product})
+        return response.data
+    } catch (error) {
+        console.log(error)
+        thunkAPI.rejectWithValue(error.message)
+    }
+})
+
 const cartSlice = createSlice({
   name: "cart",
   initialState,
-  reducers: {},
+  reducers: {
+    restTable: (state, action) => {
+        localStorage.setItem("delivery", "table")
+    },
+    restRoom: (state, action) => {
+        localStorage.setItem("delivery", "room")
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getCart.pending, (state, action) => {
@@ -57,7 +95,6 @@ const cartSlice = createSlice({
       .addCase(getCart.fulfilled, (state, action) => {
         state.cart = action.payload;
         state.loadingCart = false;
-        console.log(action.payload)
       })
       .addCase(getCart.rejected, (state, action) => {
         state.error = action.payload;
@@ -67,7 +104,27 @@ const cartSlice = createSlice({
         state.cart = action.payload;
         state.loadingCart = false;
       })
+      builder
+      .addCase(deleteProductFromBasket.fulfilled, (state, action) => {
+        state.cart = action.payload;
+      })
+      builder
+      .addCase(productInc.fulfilled, (state, action) => {
+        state.cart = action.payload;
+      })
+      builder
+      .addCase(productDec.fulfilled, (state, action) => {
+        state.cart = action.payload;
+      })
+      builder
+      .addCase(clearBasket.fulfilled, (state, action) => {
+        state.cart.products = []
+        state.cart.mainPrice = 0
+        console.log(state.cart)
+      })
   },
 });
+
+export const { restRoom, restTable } = cartSlice.actions;
 
 export default cartSlice.reducer;
