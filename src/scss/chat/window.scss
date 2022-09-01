@@ -1,0 +1,52 @@
+.window {
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  .chat_bar_open {
+    width: 25rem;
+    background-color: red;
+    position: fixed;
+    z-index: 1000;
+    height: 30rem;
+    bottom: 0;
+    right: 1rem;
+     box-shadow: 0 0 100px rgba(0, 0, 0, 0.222);
+    animation: startChat 0.5s ease;
+    .header_chat {
+      width: 100%;
+      height: 2rem;
+      background-color: blue;
+    }
+  }
+  @keyframes startChat {
+    0% {
+      height: 0rem;
+    }
+
+    100% {
+      height: 30rem;
+    }
+  }
+  .chat_bar_exit {
+    width: 25rem;
+    z-index: 1000;
+    bottom: 0;
+    background-color: red;
+    right: 1rem;
+    position: fixed;
+    animation: endChat 0.5s ease;
+  }
+  @keyframes endChat {
+    0% {
+      height: 30rem;
+    }
+
+    100% {
+      height: 0rem;
+    }
+  }
+}

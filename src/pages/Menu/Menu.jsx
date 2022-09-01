@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import Header from "../../Components/Header/Header";
+import { addProductInCart } from '../../features/cartSlice';
 import { getProducts } from '../../features/productSlice';
 import styles from '../../scss/pages/Menu.module.scss'
 // import { useAlert } from 'react-alert';
@@ -44,6 +45,11 @@ const Menu = () => {
     setWords(e.target.value);
   };
 
+  const handleBuy = (id) => {
+    dispatch(addProductInCart(id))
+  }
+
+  const delivery = localStorage.getItem("delivery")
   // const handleOrder = () => {
   //   setMessage(true)
   //   // alert("Ваш заказ добавлен в карзину");
@@ -105,6 +111,7 @@ const Menu = () => {
                   <p>
                     <b>Цена:</b> {el.price} ₽
                   </p>
+                  {delivery === 'room' && el.categoryId === "63104c2ba42da448c58ffa61" ? <button disabled>Нельзя заказывать  в номер</button> : <button onClick={() => handleBuy(el._id)}>Купить</button>}
                   {/* <button
                     onClick={() => {
                       alert.show("Oh look, an alert!");
@@ -133,6 +140,7 @@ const Menu = () => {
                   <p>
                     <b>Цена:</b> {el.price} ₽
                   </p>
+                  {delivery && el.categoryId === "63104c2ba42da448c58ffa61" ? <button disabled>Нельзя заказывать  в номер</button> : <button onClick={() => handleBuy(el._id)}>Купить</button>}
                 </div>
               ))}
           </div>
@@ -154,6 +162,7 @@ const Menu = () => {
                   <p>
                     <b>Цена:</b> {el.price} ₽
                   </p>
+                  {delivery && el.categoryId === "63104c2ba42da448c58ffa61" ? <button disabled>Нельзя заказывать  в номер</button> : <button onClick={() => handleBuy(el._id)}>Купить</button>}
                 </div>
               ))}
           </div>
