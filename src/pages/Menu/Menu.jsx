@@ -152,7 +152,7 @@ const Menu = () => {
                     <b>Описание:</b> {el.description}
                   </p>
                   <p>
-                    <b>Цена:</b> {el.price} ₽<p>₽</p>
+                    <b>Цена:</b> {el.price} ₽
                   </p>
                 </div>
               ))}
