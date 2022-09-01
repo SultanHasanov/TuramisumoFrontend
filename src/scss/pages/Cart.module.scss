@@ -1,3 +1,15 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url("http://www.elathemes.com/themes/colina/assets/images/header-1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    margin: auto;
+    font-family: "Playfair Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    flex: 1 1 auto;
+}
 .back {
     display: flex;
     flex-direction: column;
@@ -25,21 +37,11 @@
 
 
 .cartInfo {
+    margin-top: 14.6rem;
     width: 70%;
     display: flex;
     flex-direction: column;
 
-}
-
-.location {
-    padding: 0rem 1rem;
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    align-items: center;
-    height: 3rem;
-    display: flex;
-    width: 100%;
-    background-color: white;
 }
 
 .products_cart {
@@ -165,6 +167,7 @@
 }
 
 .buy_info {
+    margin-top: 14.6rem;
     background-color: white;
     width: 28%;
     display: flex;
@@ -219,4 +222,9 @@
 .sposob_oplati {
     height: fit-content;
     width: 100%;
+}
+
+.mainprice {
+    margin-left: 0.4rem;
+    margin-top: -0.4rem;
 }
