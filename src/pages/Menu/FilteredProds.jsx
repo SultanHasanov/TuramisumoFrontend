@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import Header from "../../Components/Header/Header";
 import { addProductInCart } from '../../features/cartSlice';
-import { getCategory, getProducts } from '../../features/productSlice';
+import { getCategory, getProductsBank } from '../../features/productSlice';
 import styles from '../../scss/pages/Menu.module.scss'
 // import { useAlert } from 'react-alert';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 
 
-const Menu = () => {
+const MenuId = () => {
 
   // const alert = useAlert()
 
@@ -22,9 +22,11 @@ const Menu = () => {
 
   const dispatch = useDispatch();
 
+  const { typeId } = useParams()
+
   useEffect(() => {
-    dispatch(getProducts());
-  }, [dispatch]);
+    dispatch(getProductsBank(typeId));
+  }, [typeId]);
 
   useEffect(() => {
     dispatch(getCategory());
@@ -184,4 +186,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default MenuId;
