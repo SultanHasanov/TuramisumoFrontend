@@ -1,51 +1,123 @@
 import React, { useState } from "react";
 import Header from "../../Components/Header/Header";
 import styles from "../../scss/pages/Restoran.module.scss";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 import { restRoom, restTable } from "../../features/cartSlice";
 import { Link } from "react-router-dom";
+import { GiRiceCooker } from "react-icons/gi";
+import { MdFoodBank } from "react-icons/md";
+
 
 const Restoran = () => {
+  const [restoran, setRestoran] = useState(true);
+  const [shefs, setShefs] = useState(false);
 
   const dispatch = useDispatch();
 
+  const handleClickShefs = () => {
+    setShefs(true);
+    setRestoran(false);
+  };
+
+  const handleClickRestoran = () => {
+    setShefs(false);
+    setRestoran(true);
+  };
+
   const handleTable = () => {
-    dispatch(restTable())
-  }
+    dispatch(restTable());
+  };
 
   const handleRoom = () => {
-    dispatch(restRoom())
-  }
-
+    dispatch(restRoom());
+  };
 
   return (
     <div className={styles.main_res}>
       <Header />
-      <h1 className={styles.restoranTitle}>
-        РЕСТОРАН
-        <span style={{ color: "rgb(206, 176, 113)" }}> «TURAMISUMO»</span>
-      </h1>
-      <div className={styles.restoranTitle}>
-        Ресторан «TURAMISUMO»: лучшее предложение по соотношению цена-качество.
-        У нас вы можете насладиться как свежайшими морепродуктами, так и
-        народными блюдами.
+      <div className={styles.title}>
+        <h1>Ресторан Teramisumo</h1>
       </div>
-      <div className={styles.choose}>
-        <div className={styles.choose_table}>
-          <img
-            src="https://kartinkin.net/uploads/posts/2021-08/1630081232_10-kartinkin-com-p-stol-v-kafe-s-yedoi-yeda-krasivo-foto-12.jpg"
-            alt=""
-            className={styles.image}
-          />
-          <button  onClick={handleTable} className={styles.button}><Link to="/menu">Забронировать столик</Link></button>
+      <div className={styles.restoran_info}>
+        <div className={styles.categor_restoran}>
+          <div className={styles.icon} onClick={handleClickRestoran}>
+            <MdFoodBank />
+          </div>
+          <div className={styles.icon} onClick={handleClickShefs}>
+            <GiRiceCooker />
+          </div>
+          <div className={styles.icon}>
+            <MdFoodBank />
+          </div>
+          <div className={styles.icon}>
+            <MdFoodBank />
+          </div>
         </div>
-        <div className={styles.choose_room}>
-          <img
-            src="https://media-cdn.tripadvisor.com/media/photo-s/07/3c/9f/d3/caption.jpg"
-            alt=""
-            className={styles.image}
-          />
-          <button onClick={handleRoom} className={styles.button}><Link to="/menu">Заказать в номер</Link></button>
+
+        <div className={styles.restoran_blog}>
+          {restoran && (
+            <div className={styles.res_block}>
+              <div className={styles.res_title}>
+                <h1>Restaurants</h1>
+                <span>
+                  The Resturant is the Colina Resort's iconic dining venue,
+                  serving breakfast, afternoon tea and an evening service
+                  complimented by the recent addition of a bar and craft
+                  cocktail program.
+                </span>
+              </div>
+              <div className={styles.menu}>
+                <div className={styles.card_rest}>
+                  <button><Link to="/menu">Забронировать столик</Link></button>
+                </div>
+
+                <div className={styles.card_rest2}>
+                  <button><Link to="/menu">Закать в номер</Link></button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {shefs && (
+            <div className={styles.res_block}>
+              <div className={styles.res_title}>
+                <h1>Restaurants</h1>
+                <span>
+                  The Resturant is the Colina Resort's iconic dining venue,
+                  serving breakfast, afternoon tea and an evening service
+                  complimented by the recent addition of a bar and craft
+                  cocktail program.
+                </span>
+              </div>
+              <div className={styles.shefs}>
+                <div className={styles.povar}>
+                  <div className={styles.photoshef}>
+                    <img
+                      src="https://bigpicture.ru/wp-content/uploads/2018/11/saltbae_salt1_index1a.jpg"
+                      alt=""
+                    />
+                  </div>
+
+                  <div className={styles.povar_info}>
+                    <div className={styles.bio}>
+                      <h1>Salt Bae</h1>
+                      <span>
+                        Нусрет Гёкче — турецкий мясник, шеф-повар и ресторатор,
+                        которому принадлежит сеть стейк-хаусов Nusr-Et.
+                      </span>
+                    </div>
+                    <div className={styles.bio_title}>
+                      <span>
+                        С января 2017 года Гёкче стал широко известен благодаря
+                        серии вирусных интернет-видеороликов и мемов, в которых
+                        показано, как он ловко режет мясо и посыпает солью.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
