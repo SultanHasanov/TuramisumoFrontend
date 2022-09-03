@@ -21,6 +21,7 @@ import Booking from './pages/Booking/Booking'
 import CartPage from './pages/Cart/Cart'
 import Menu from './pages/Menu/Menu'
 import WelcomeCard from './pages/WelcomeCard/WelcomeCard'
+import Hall from './pages/Hall/Hall'
 
 function App() {
   const token = useSelector((state) => state.user.token)
@@ -64,6 +65,7 @@ function App() {
           <Route path='/sea' element={<Sea />}/>
           <Route path='/buy-room/:id' element={<Booking />} />
           <Route path='/welcome' element={<WelcomeCard />} />
+          <Route path='/hall' element={<Hall />} />
         </Routes>
         <Footer />
       </div>

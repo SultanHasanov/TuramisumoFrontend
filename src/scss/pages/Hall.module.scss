@@ -1,0 +1,41 @@
+.main_hall {
+    width: 100%;
+    background-size: 100%;
+    flex: 1 1 auto;
+    background-repeat: no-repeat;
+    background-image: url("http://www.elathemes.com/themes/colina/assets/images/header-1.jpg");
+}
+
+.hall_body {
+    margin-top: 18.9rem;
+    background-image: url('https://yaponka.su/images/template/tables1.jpg');
+    width: 100%;
+    height: 69.3vw;
+        background-size: 100%;
+        background-repeat: no-repeat;
+}
+
+.hall_btn {
+    background-color: #01344e;
+    display: flex;
+    justify-content: space-evenly;
+    button {
+        margin-top: 1rem;
+        width: 3rem;
+        height: 3rem;
+        border: none;
+        border-radius: 0.2rem;
+        color: white;
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+}
+
+.color_grey {
+    background-color: grey;
+}
+
+
+.color_red {
+    background-color: red;
+}
