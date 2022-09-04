@@ -22,6 +22,7 @@ import CartPage from './pages/Cart/Cart'
 import Menu from './pages/Menu/Menu'
 import WelcomeCard from './pages/WelcomeCard/WelcomeCard'
 import Hall from './pages/Hall/Hall'
+import MenuId from './pages/Menu/FilteredProds';
 
 function App() {
   const token = useSelector((state) => state.user.token)
@@ -66,6 +67,7 @@ function App() {
           <Route path='/buy-room/:id' element={<Booking />} />
           <Route path='/welcome' element={<WelcomeCard />} />
           <Route path='/hall' element={<Hall />} />
+          <Route path='/menu/:typeId' element={<MenuId />} />
         </Routes>
         <Footer />
       </div>

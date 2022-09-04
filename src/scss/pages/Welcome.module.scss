@@ -3,6 +3,7 @@
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
+    background-color: whitesmoke;
     background-repeat: no-repeat;
     background-size: 100%;
     background-image: url("http://www.elathemes.com/themes/colina/assets/images/header-1.jpg");
@@ -21,9 +22,11 @@
 }
 
 .main_card {
+    background-color: white;
     width: 80%;
     margin: 12rem auto;
     display: flex;
+    padding: 3rem;
     justify-content: space-between;
     h1 {
         font-weight:100 ;
@@ -36,10 +39,20 @@
     display: flex;
     flex-direction: column;
 }
+.line {
+    width: 0.1%;
+    height: 15rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(208, 200, 200);
+    margin: 2rem auto;
+}
 
 
 .title_card {
     width: 100%;
+    margin: 0rem 0rem 1rem 0rem;
     display: flex;
 }
 
@@ -56,6 +69,14 @@
     margin: 1.3rem 0rem;
     display: flex;
     flex-direction: column;
+    h3 {
+        font-weight: 100;
+    }
+}
+
+.room_number {
+    width: 100%;
+    margin: 1rem 0rem;
     h3 {
         font-weight: 100;
     }

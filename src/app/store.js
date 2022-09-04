@@ -4,7 +4,11 @@ import userSlice from "../features/userSlice";
 import chatUserAdmin from "../features/chatUserAdmin";
 import productSlice from "../features/productSlice";
 import cartSlice from "../features/cartSlice";
+
 import tableSlice from "../features/tableSlice";
+
+import numbers from '../features/numberSlice';
+
 
 export const store = configureStore({
   reducer: {
@@ -13,6 +17,10 @@ export const store = configureStore({
     chatUserAdmin,
     products: productSlice,
     cart: cartSlice,
-    table: tableSlice
+
+    table: tableSlice,
+
+    numbers
+
   },
 })
